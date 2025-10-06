@@ -271,6 +271,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &259570632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259570634}
+  - component: {fileID: 259570633}
+  m_Layer: 0
+  m_Name: LevelManagerD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &259570633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259570632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d11bf66899784145a9137962279ee6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 510270339}
+  lobbySceneName: Lobby
+  DrinksCollected: 0
+--- !u!4 &259570634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259570632}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.87869, y: 2.30786, z: 2.6662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510270338
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +420,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 556ea7f3bb127da4788ed5e77d417af0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 557042081}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 556ea7f3bb127da4788ed5e77d417af0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 557042082}
   m_SourcePrefab: {fileID: 100100000, guid: 556ea7f3bb127da4788ed5e77d417af0, type: 3}
 --- !u!1 &557042080 stripped
 GameObject:
@@ -397,6 +447,23 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &557042082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557042080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2f4a0cda387fb409f9e13e55792d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactTextMessage: Presiona E
+  interactDistance: 3
+  levelManager: {fileID: 259570633}
+  managerD: {fileID: 259570633}
 --- !u!1 &589983252
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,53 +649,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1627887335
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1627887337}
-  - component: {fileID: 1627887336}
-  m_Layer: 0
-  m_Name: LevelManagerA
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1627887336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627887335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 252f6d9c347f1fd499ee56b4a647aa04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 510270339}
-  exitDoor: {fileID: 0}
-  lobbySceneName: Lobby
---- !u!4 &1627887337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627887335}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.33355, y: -0.9918, z: 7.37833}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1689686567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -700,6 +720,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d39d8393bc55e54dae31e77eddee793, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1689686569}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d39d8393bc55e54dae31e77eddee793, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1689686570}
   m_SourcePrefab: {fileID: 100100000, guid: 2d39d8393bc55e54dae31e77eddee793, type: 3}
 --- !u!1 &1689686568 stripped
 GameObject:
@@ -724,6 +747,23 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1689686570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689686568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb7e825dfc1e80c488a83a4d84d7ae1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactTextMessage: Presiona E
+  interactDistance: 3
+  levelManager: {fileID: 259570633}
+  managerD: {fileID: 259570633}
 --- !u!1001 &1927458268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -783,6 +823,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2d4a858b7fc35840a77aa697e3db2a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1927458270}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f2d4a858b7fc35840a77aa697e3db2a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1927458271}
   m_SourcePrefab: {fileID: 100100000, guid: f2d4a858b7fc35840a77aa697e3db2a6, type: 3}
 --- !u!1 &1927458269 stripped
 GameObject:
@@ -807,6 +850,23 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1927458271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927458269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb7e825dfc1e80c488a83a4d84d7ae1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactAction: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactTextMessage: Presiona E
+  interactDistance: 3
+  levelManager: {fileID: 259570633}
+  managerD: {fileID: 259570633}
 --- !u!1 &2037721710
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +925,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 510270339}
-  - {fileID: 1627887337}
   - {fileID: 912472648}
   - {fileID: 2037721714}
   - {fileID: 589983254}
@@ -875,3 +934,4 @@ SceneRoots:
   - {fileID: 1689686567}
   - {fileID: 1927458268}
   - {fileID: 557042079}
+  - {fileID: 259570634}

@@ -7,6 +7,11 @@ public class LevelManager : MonoBehaviour
     public Button btnA, btnB, btnC, btnD;
     private int currentUnlocked = 0; // 0 = A, 1 = B, etc.
 
+    public GameObject hallway;             // Pasillo que se activará
+    public GameObject finalNPC;
+
+    public static bool finalHallwayUnlocked = false;
+
     void Start()
     {
         UpdateButtons();
@@ -14,6 +19,9 @@ public class LevelManager : MonoBehaviour
         btnB.onClick.AddListener(() => LoadLevel("LevelB"));
         btnC.onClick.AddListener(() => LoadLevel("LevelC"));
         btnD.onClick.AddListener(() => LoadLevel("LevelD"));
+
+        if (finalHallwayUnlocked)
+            ActivateFinalHallway();
     }
 
     void UpdateButtons()
@@ -36,5 +44,23 @@ public class LevelManager : MonoBehaviour
     void LoadLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void ActivateFinalHallway()
+    {
+        if (hallway != null) hallway.SetActive(true);
+        if (finalNPC != null) finalNPC.SetActive(true);
+
+        // Opcional: mostrar mensaje en HUD
+        PersistentHUD.instance?.SetObjectiveText("Sigue el pasillo hacia la persona final");
+
+        finalHallwayUnlocked = true;
+    }
+
+    public void EndGame()
+    {
+        Debug.Log("Juego terminado");
+        PersistentHUD.instance?.ShowInteractText(""); // Oculta texto
+                                                      // Aquí podrías mostrar menú final o detener movimiento del player
     }
 }
